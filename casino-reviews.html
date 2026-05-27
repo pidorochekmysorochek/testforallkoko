@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A clean casino review page comparing crypto-friendly online casinos by payouts, games, bonuses, KYC, and overall player experience">
+<title>Crypto Casino Reviews 2026 | Fast Payouts, Bonuses & Real Player Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0c0f0a;
+    --surface: #141810;
+    --surface2: #1c211a;
+    --accent: #b5f23a;
+    --accent-dim: #8ab82c;
+    --text: #e8ead4;
+    --text-muted: #7d8070;
+    --border: #2a2f28;
+    --red: #f25a5a;
+    --gold: #e8c84a;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(12,15,10,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+  }
+
+  .nav-brand {
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    color: var(--accent);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+  }
+
+  .nav-links { display: flex; gap: 8px; }
+  .nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.2s;
+  }
+  .nav-links a:hover { color: var(--text); background: var(--surface2); }
+
+  .nav-badge {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-family: 'Space Mono', monospace;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 80px 24px 64px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  .hero-tag {
+    display: inline-block;
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+    background: rgba(181,242,58,0.08);
+    border: 1px solid rgba(181,242,58,0.2);
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 24px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .hero h1 {
+    font-size: clamp(28px, 5vw, 44px);
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+  }
+
+  .hero p {
+    color: var(--text-muted);
+    font-size: 17px;
+    max-width: 560px;
+    margin-bottom: 32px;
+    line-height: 1.7;
+  }
+
+  .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+
+  .btn-primary {
+    background: var(--accent);
+    color: #0c0f0a;
+    font-weight: 600;
+    padding: 11px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.2s;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: #c8ff50; transform: translateY(-1px); }
+
+  .btn-secondary {
+    background: var(--surface2);
+    color: var(--text);
+    font-weight: 500;
+    padding: 11px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    border: 1px solid var(--border);
+    transition: all 0.2s;
+    display: inline-block;
+  }
+  .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* FEATURED */
+  .featured-strip {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    overflow-x: auto;
+  }
+
+  .featured-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+  }
+
+  .featured-casino {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    white-space: nowrap;
+  }
+
+  .casino-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    font-weight: 700;
+    color: #0c0f0a;
+    flex-shrink: 0;
+  }
+
+  .featured-info { line-height: 1.2; }
+  .featured-name { font-weight: 600; font-size: 14px; }
+  .featured-sub { font-size: 12px; color: var(--text-muted); }
+
+  .score-badge {
+    background: rgba(181,242,58,0.1);
+    border: 1px solid rgba(181,242,58,0.25);
+    color: var(--accent);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 5px;
+  }
+
+  /* SECTIONS */
+  .section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 64px 24px;
+  }
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  .section-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .section-header h2 {
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
+  }
+
+  .section-header p {
+    color: var(--text-muted);
+    font-size: 15px;
+    max-width: 520px;
+  }
+
+  /* REVIEW CARDS */
+  .reviews-grid { display: flex; flex-direction: column; gap: 16px; }
+
+  .review-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+    align-items: start;
+    transition: border-color 0.2s;
+  }
+  .review-card:hover { border-color: rgba(181,242,58,0.3); }
+
+  .review-card.featured {
+    border-color: rgba(181,242,58,0.25);
+    background: linear-gradient(135deg, var(--surface) 0%, rgba(181,242,58,0.04) 100%);
+  }
+
+  .card-tag {
+    font-size: 11px;
+    font-family: 'Space Mono', monospace;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .card-tag.best { color: var(--accent); }
+
+  .review-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+  }
+
+  .review-card p {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.65;
+    margin-bottom: 16px;
+  }
+
+  .card-meta {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .code-pill {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 5px;
+    color: var(--gold);
+  }
+
+  .card-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+    min-width: 100px;
+  }
+
+  .score-big {
+    font-family: 'Space Mono', monospace;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+  }
+
+  .score-label {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 2px;
+    display: block;
+    text-align: right;
+  }
+
+  .visit-btn {
+    background: var(--accent);
+    color: #0c0f0a;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 9px 18px;
+    border-radius: 7px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.2s;
+    display: inline-block;
+  }
+  .visit-btn:hover { background: #c8ff50; }
+
+  /* DIVIDER */
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  /* TABLE */
+  .table-wrap { overflow-x: auto; border-radius: 12px; border: 1px solid var(--border); }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 640px;
+  }
+
+  thead {
+    background: var(--surface);
+  }
+
+  th {
+    padding: 13px 16px;
+    text-align: left;
+    font-size: 11px;
+    font-family: 'Space Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+  }
+
+  td {
+    padding: 14px 16px;
+    font-size: 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+
+  tr:last-child td { border-bottom: none; }
+
+  tr:nth-child(even) td { background: rgba(255,255,255,0.015); }
+
+  td strong { color: var(--accent); }
+
+  td code {
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    background: var(--surface2);
+    padding: 2px 7px;
+    border-radius: 4px;
+    color: var(--gold);
+  }
+
+  /* METHOD */
+  #method { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+
+  .method-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 32px;
+  }
+
+  .method-box {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+  }
+
+  .method-box h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .dot-green { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); display: inline-block; }
+  .dot-red { width: 8px; height: 8px; border-radius: 50%; background: var(--red); display: inline-block; }
+
+  .method-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+
+  .method-box li {
+    font-size: 14px;
+    color: var(--text-muted);
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .method-box li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--border);
+  }
+
+  /* CODES */
+  .codes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 12px;
+    margin-top: 32px;
+  }
+
+  .code-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .code-casino { font-weight: 600; font-size: 15px; }
+  .code-note { font-size: 12px; color: var(--text-muted); margin-top: 3px; }
+
+  .code-value {
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    color: var(--gold);
+    background: var(--surface2);
+    border: 1px solid rgba(232,200,74,0.2);
+    padding: 6px 12px;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 24px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .footer-links { display: flex; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
+  .footer-links a {
+    color: var(--text-muted);
+    font-size: 13px;
+    text-decoration: none;
+  }
+  .footer-links a:hover { color: var(--text); }
+
+  .disclaimer {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    max-width: 660px;
+  }
+
+  @media (max-width: 600px) {
+    .method-grid { grid-template-columns: 1fr; }
+    .review-card { grid-template-columns: 1fr; }
+    .card-right { flex-direction: row; align-items: center; justify-content: space-between; min-width: auto; }
+    .score-label { text-align: left; }
+    nav { gap: 8px; }
+    .nav-badge { display: none; }
+    .nav-links a { padding: 6px 8px; font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#top" class="nav-brand">★ Casino Notes</a>
+  <div class="nav-links">
+    <a href="#reviews">Reviews</a>
+    <a href="#comparison">Comparison</a>
+    <a href="#method">How I check</a>
+    <a href="#codes">Promo codes</a>
+  </div>
+  <span class="nav-badge">Updated for 2026</span>
+</nav>
+
+<!-- HERO -->
+<section id="top" class="hero">
+  <span class="hero-tag">Crypto casino focused</span>
+  <h1>Online casino reviews without the fake 10/10 energy</h1>
+  <p>A cleaner review page for people who care more about cashouts, KYC, support, game catalog, and crypto payments than some giant bonus banner nobody reads anyway</p>
+  <div class="hero-ctas">
+    <a href="#reviews" class="btn-primary">See top picks</a>
+    <a href="#comparison" class="btn-secondary">Compare brands</a>
+  </div>
+</section>
+
+<!-- FEATURED STRIP -->
+<div class="featured-strip">
+  <span class="featured-label">Top pick</span>
+  <div class="featured-casino">
+    <div class="casino-avatar">R</div>
+    <div class="featured-info">
+      <div class="featured-name">Rakebit</div>
+      <div class="featured-sub">Best current all-rounder</div>
+    </div>
+    <span class="score-badge">9.4</span>
+  </div>
+  <div style="height:32px;width:1px;background:var(--border);flex-shrink:0"></div>
+  <span class="featured-label">5 brands checked &nbsp;·&nbsp; BTC crypto friendly &nbsp;·&nbsp; KYC noted upfront</span>
+</div>
+
+<!-- REVIEWS -->
+<section id="reviews" class="section">
+  <div class="section-header">
+    <span class="section-tag">Quick reviews</span>
+    <h2>Short version first</h2>
+    <p>Because nobody wants to read a 4,000 word casino review before even knowing if the place cashes out properly</p>
+  </div>
+
+  <div class="reviews-grid">
+
+    <div class="review-card featured">
+      <div>
+        <span class="card-tag best">Fast crypto vibe</span>
+        <h3>Rakebit</h3>
+        <p>Feels like the strongest pick if you want a modern crypto casino layout, decent game spread, and fewer annoying clicks between deposit and play</p>
+        <div class="card-meta">
+          <span class="code-pill">BEARWIN</span>
+          <a href="https://rake-tracker.com/dw70zxht2" target="_blank" rel="noopener noreferrer" class="visit-btn">Visit Rakebit</a>
+        </div>
+      </div>
+      <div class="card-right">
+        <div>
+          <div class="score-big">9.4</div>
+          <span class="score-label">Overall score</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div>
+        <span class="card-tag">Slots-heavy</span>
+        <h3>SlotsGem</h3>
+        <p>Pretty solid if you mostly care about slot variety, promo drops, and a simple casino flow that does not feel buried under menus</p>
+        <div class="card-meta">
+          <span class="code-pill">SGAU11</span>
+          <a href="https://usgambling.live/4dT9vBhG" target="_blank" rel="noopener noreferrer" class="visit-btn">Visit SlotsGem</a>
+        </div>
+      </div>
+      <div class="card-right">
+        <div>
+          <div class="score-big">9.1</div>
+          <span class="score-label">Overall score</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div>
+        <span class="card-tag">Promo friendly</span>
+        <h3>HellSpin</h3>
+        <p>More of a promo and slots pick for me, decent if you are checking bonuses but still worth reading the terms before you ape in</p>
+        <div class="card-meta">
+          <span class="code-pill">HSAU11</span>
+          <a href="https://top.aglobally.com/redirect.aspx?pid=97522&bid=1466&lpid=6" target="_blank" rel="noopener noreferrer" class="visit-btn">Visit HellSpin</a>
+        </div>
+      </div>
+      <div class="card-right">
+        <div>
+          <div class="score-big">8.8</div>
+          <span class="score-label">Overall score</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div>
+        <span class="card-tag">Good for variety</span>
+        <h3>NeedForSpin</h3>
+        <p>Good fit when you want a bigger general casino feel with slots, table games, and regular bonus code stuff in the mix</p>
+        <div class="card-meta">
+          <span class="code-pill">NEEDTHEWIN</span>
+          <a href="https://goneedforspin.com/db0aynp9w" target="_blank" rel="noopener noreferrer" class="visit-btn">Visit NeedForSpin</a>
+        </div>
+      </div>
+      <div class="card-right">
+        <div>
+          <div class="score-big">8.7</div>
+          <span class="score-label">Overall score</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div>
+        <span class="card-tag">Casual pick</span>
+        <h3>WishKing</h3>
+        <p>Not the flashiest one here, but it works as a casual option if you just want a simple place to spin and use a code</p>
+        <div class="card-meta">
+          <span class="code-pill">SPINLUCK</span>
+          <a href="https://usgambling.live/MgDh4tQC" target="_blank" rel="noopener noreferrer" class="visit-btn">Visit WishKing</a>
+        </div>
+      </div>
+      <div class="card-right">
+        <div>
+          <div class="score-big">8.4</div>
+          <span class="score-label">Overall score</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- COMPARISON -->
+<section id="comparison" class="section">
+  <div class="section-header">
+    <span class="section-tag">Side-by-side comparison</span>
+    <h2>Not every casino is good for the same thing</h2>
+    <p>Some are better for crypto speed, some for slots, some for bonus hunting</p>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Casino</th>
+          <th>Best for</th>
+          <th>Payments</th>
+          <th>Games</th>
+          <th>KYC notes</th>
+          <th>Promo code</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Rakebit</strong></td>
+          <td>Crypto-first players who want a clean, fast site</td>
+          <td>BTC · ETH · LTC · USDT</td>
+          <td>Slots, live casino, table games, crash-style games</td>
+          <td>Check limits before big withdrawals</td>
+          <td><code>BEARWIN</code></td>
+        </tr>
+        <tr>
+          <td><strong>SlotsGem</strong></td>
+          <td>Slot players and bonus code users</td>
+          <td>Crypto · Cards</td>
+          <td>Slots, live poker, roulette, blackjack</td>
+          <td>Usually matters more when withdrawals get bigger</td>
+          <td><code>SGAU11</code></td>
+        </tr>
+        <tr>
+          <td><strong>HellSpin</strong></td>
+          <td>Promo hunters who still want a normal casino catalog</td>
+          <td>Crypto · E-wallets</td>
+          <td>Slots, live games, poker-style tables</td>
+          <td>Read bonus terms before depositing</td>
+          <td><code>HSAU11</code></td>
+        </tr>
+        <tr>
+          <td><strong>NeedForSpin</strong></td>
+          <td>Mixed casino play and regular codes</td>
+          <td>Crypto · Cards · Other</td>
+          <td>Slots, poker, live poker, table games</td>
+          <td>Fresh account may be needed for some codes</td>
+          <td><code>NEEDTHEWIN</code></td>
+        </tr>
+        <tr>
+          <td><strong>WishKing</strong></td>
+          <td>Simple casual play with a clean promo angle</td>
+          <td>Crypto · Standard</td>
+          <td>Slots and basic casino games</td>
+          <td>Always check country rules first</td>
+          <td><code>SPINLUCK</code></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- METHOD -->
+<section id="method" class="section" style="background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);max-width:100%;">
+  <div style="max-width:900px;margin:0 auto;padding:64px 24px;">
+    <div class="section-header">
+      <span class="section-tag">How I judge casinos</span>
+      <h2>The stuff I actually care about before depositing</h2>
+      <p>Because a shiny homepage means basically nothing if withdrawals are a mess</p>
+    </div>
+
+    <div class="method-grid">
+      <div class="method-box">
+        <h3><span class="dot-green"></span> What matters most</h3>
+        <ul>
+          <li>Cashout speed, especially on crypto withdrawals</li>
+          <li>Clear KYC rules before you deposit real money</li>
+          <li>Real game providers, not some mystery slot catalog</li>
+          <li>Support that does not vanish when you ask about withdrawals</li>
+          <li>Bonus terms that do not feel like a legal trap</li>
+        </ul>
+      </div>
+      <div class="method-box">
+        <h3><span class="dot-red"></span> Red flags</h3>
+        <ul>
+          <li>No real license info or company name anywhere useful</li>
+          <li>Footer badges that do not link to anything verifiable</li>
+          <li>Too many complaints about stalled cashouts</li>
+          <li>Wild bonus claims with tiny unreadable terms</li>
+          <li>Support replies that sound copied and go nowhere</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMO CODES -->
+<section id="codes" class="section">
+  <div class="section-header">
+    <span class="section-tag">Promo codes</span>
+    <h2>Current codes</h2>
+    <p>Codes can change fast, so treat this like a monthly drop and double-check before making a fresh account</p>
+  </div>
+
+  <div class="codes-grid">
+    <div class="code-card">
+      <div>
+        <div class="code-casino">Rakebit</div>
+        <div class="code-note">Casino bonus / slots · Use on a fresh account if required</div>
+      </div>
+      <span class="code-value">BEARWIN</span>
+    </div>
+    <div class="code-card">
+      <div>
+        <div class="code-casino">SlotsGem</div>
+        <div class="code-note">Slots promos · Check region rules first</div>
+      </div>
+      <span class="code-value">SGAU11</span>
+    </div>
+    <div class="code-card">
+      <div>
+        <div class="code-casino">HellSpin</div>
+        <div class="code-note">Slots / casino promo · Read wagering terms</div>
+      </div>
+      <span class="code-value">HSAU11</span>
+    </div>
+    <div class="code-card">
+      <div>
+        <div class="code-casino">NeedForSpin</div>
+        <div class="code-note">General casino play · Fresh account may matter</div>
+      </div>
+      <span class="code-value">NEEDTHEWIN</span>
+    </div>
+    <div class="code-card">
+      <div>
+        <div class="code-casino">WishKing</div>
+        <div class="code-note">Slots · Terms can change</div>
+      </div>
+      <span class="code-value">SPINLUCK</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="#reviews">Reviews</a>
+    <a href="#comparison">Comparison</a>
+    <a href="#method">Method</a>
+    <a href="#codes">Codes</a>
+  </div>
+  <p class="disclaimer"><strong>Disclaimer:</strong> Gambling involves risk and is only for adults where legally allowed. This page is for informational review-style content only. Always check local laws, casino terms, bonus rules, and withdrawal requirements before depositing.</p>
+</footer>
+
+</body>
+</html>
